@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    name: ci
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt install -y luarocks
+          sudo luarocks install luacheck
+
+      - name: check
+        run: luacheck *.lua
+
+      - name: test
+        run: lua lua-utf8-test.lua -v
