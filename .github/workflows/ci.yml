@@ -27,12 +27,15 @@ jobs:
         run: luacheck *.lua
 
       - name: Run test
-        run: lua lua-utf8-test.lua -v
+        run: |
+          lua lua-utf8-test.lua -v
+          ls -al
+          pwd
 
       - name: Upload to Codecov
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: ./luacov.report.out
+          file: luacov.report.out
           flags: unittests
           fail_ci_if_error: true
