@@ -22,15 +22,13 @@ jobs:
           sudo apt install -y luarocks
           sudo luarocks install luacheck
           sudo luarocks install luaunit
+          sudo luarocks install luacov
 
       - name: Run luacheck
         run: luacheck *.lua
 
       - name: Run test
-        run: |
-          lua lua-utf8-test.lua -v
-          ls -al
-          pwd
+        run: lua -lluacov lua-utf8-test.lua -v
 
       - name: Upload to Codecov
         uses: codecov/codecov-action@v1
