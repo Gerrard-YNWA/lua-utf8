@@ -1,6 +1,6 @@
-files["utf8_str_test.lua"] = {
+files["lua-utf8-test.lua"] = {
     ignore = {
-        "111/TestUtf8",
-        "112/TestUtf8"
+        "111/TestLuaUtf8",
+        "112/TestLuaUtf8"
     }
 }

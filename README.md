@@ -1,12 +1,12 @@
 Name
 ====
 
-lua-utf8, utf8 tool lib for lua.
+lua-utf8, simple, lightweight utf8 lib in pure lua.
 
 Description
 ===========
 
-This library implements several basic function for utf8 strings in pure lua.
+This library implements several basic function for utf8 strings in pure lua with no dependency.
 
 * [Methods](#methods)
     * [validate](#validate)
@@ -18,19 +18,19 @@ Methods
 ======
 
 ### validate
-Check the given string is a valid utf8 string.
+Validate whether the given string is a valid utf8 string.
 
 `syntax: valid, invalid_pos = utf8.validate(str)`
 
 Args:
 
-  str: string
+  * `str`: string
 
 Returns:
 
-  (bool) whether the input string is a valid utf8 string.
+  * `valid` (bool) whether the input string is a valid utf8 string.
 
-  (number) position of the first invalid byte if given.
+  * `invalid_pos` (number) position of the first invalid byte in the given string.
 
 [Back to TOP](#name)
 
@@ -41,28 +41,28 @@ Get the given string len of utf8.
 
 Args:
 
-  str: string
+  * `str`: string
 
 Returns:
 
-  (number) the length of valid utf8 string part.
+  * `len` (number) the length of valid utf8 string part.
 
-  (number) position of the first invalid byte if given.
+  * `invalid_pos` (number) position of the first invalid byte in the given string.
 
 [Back to TOP](#name)
 
 ### reverse
-Reverse the given valid utf8 string.
+Reverse a given valid utf8 string.
 
 `syntax s = utf8.reverse(str)`
 
 Args:
 
-  str: string
+  * `str`: string
 
 Returns:
 
-  (string) a reversed utf8 string of the given string.
+  * `s` (string) a reversed utf8 string of the given string.
 
 [Back to TOP](#name)
 
@@ -73,14 +73,14 @@ Sub the given valid utf8 string with the given index.
 
 Args:
 
-  str: string
+  * str: string
 
-  s: number, start index of utf8 character
+  * s: number, start index of utf8 character
 
-  e: number, end index of utf8 character
+  * e: number, end index of utf8 character
 
 Returns:
 
-  (string) utf8 sub string
+  * `s` (string) utf8 sub string
 
 [Back to TOP](#name)

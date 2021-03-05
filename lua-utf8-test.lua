@@ -1,11 +1,11 @@
 local luaunit = require("luaunit")
 
-TestUtf8 = {
-    utf8 = require("utf8_str")
+TestLuaUtf8 = {
+    utf8 = require("lua-utf8")
 }
 
 
-function TestUtf8:testUtf8Validate()
+function TestLuaUtf8:testUtf8Validate()
     local cases = {
         {
             value = "",
@@ -37,7 +37,7 @@ function TestUtf8:testUtf8Validate()
 end
 
 
-function TestUtf8:testUtf8Len()
+function TestLuaUtf8:testUtf8Len()
     local cases = {
         {
             value = "",
@@ -68,7 +68,7 @@ function TestUtf8:testUtf8Len()
 end
 
 
-function TestUtf8:testUtf8Reverse()
+function TestLuaUtf8:testUtf8Reverse()
     local cases = {
         {
             value = "a",
@@ -91,7 +91,7 @@ function TestUtf8:testUtf8Reverse()
 end
 
 
-function TestUtf8:testUtf8Sub()
+function TestLuaUtf8:testUtf8Sub()
     local cases = {
         {
             value = "lua程序设计",

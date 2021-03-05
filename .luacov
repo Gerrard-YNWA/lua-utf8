@@ -1,6 +1,0 @@
-return {
-    include = {
-        "utf8_str$"
-    }
-}
-
