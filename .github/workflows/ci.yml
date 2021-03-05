@@ -23,8 +23,16 @@ jobs:
           sudo luarocks install luacheck
           sudo luarocks install luaunit
 
-      - name: check
+      - name: Run luacheck
         run: luacheck *.lua
 
-      - name: test
+      - name: Run test
         run: lua lua-utf8-test.lua -v
+
+      - name: Upload to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./luacov.report.out
+          flags: unittests
+          fail_ci_if_error: true

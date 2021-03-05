@@ -1,0 +1,7 @@
+return {
+    include = {
+        "lua%-utf8$"
+    },
+    runreport = true,
+    deletestats = true,
+}

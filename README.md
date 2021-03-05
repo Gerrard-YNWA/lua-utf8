@@ -1,3 +1,10 @@
+lua-utf8
+========
+[![Actions Status](https://github.com/Gerrard-YNWA/lua-utf8/actions/workflows/ci.yml/badge.svg)](https://github.com/Gerrard-YNWA/lua-utf8/actions)
+[![codecov](https://codecov.io/gh/Gerrard-YNWA/lua-utf8/branch/master/graph/badge.svg)](https://codecov.io/gh/Gerrard-YNWA/lua-utf8)
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
+
+
 Name
 ====
 
