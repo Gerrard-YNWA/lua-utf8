@@ -20,7 +20,7 @@ function TestLuaUtf8:testUtf8Validate()
             valid = true
         },
         {
-            value = "lua程序\x81\x01设计",
+            value = "lua程序\129\001设计",
             valid = false,
             invalid_pos = 10
         },
@@ -52,7 +52,7 @@ function TestLuaUtf8:testUtf8Len()
             expect = 3
         },
         {
-            value = "lua程序\x81\x01设计",
+            value = "lua程序\129\001设计",
             expect = 5,
             invalid_pos = 10
         },
